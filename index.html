@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script>
+        function sa() {
+            var choice = prompt("enter the choice 1.form validation 2.DOM");
+            if (choice == 1) {
+                location.replace("form.html");
+            } else if (choice == 2) {
+                location.replace("dom.html");
+            } else {
+                sa();
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="sa();">
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        butto {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            color: white;
+            background: green;
+        }
+
+        div {
+            margin: 100px 190px;
+            padding: 50px;
+            border: 1px solid green;
+        }
+
+        span {
+            background-color: red;
+        }
+
+        #countt {
+            color: red;
+            font-size: 20px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function() {
+
+            $("#Highlight").click(function() {
+                var i = 0;
+                var sp = $("#parag").text();
+                var res = sp.split(" ");
+                var h = res[0];
+                var condition = sp.split(" ").length;
+                for (i = 1; i < condition; i++) {
+                    if (res[i].length >= 8) {
+                        var a = "<span>" + res[i] + "</span>";
+                        h += " " + a;
+                    } else {
+                        h += " " + res[i];
+                    }
+                }
+                document.getElementById("parag").innerHTML = h;
+            });
+            $("#Split").click(function() {
+
+                var i = 0;
+                var rea = "";
+                var sp = $("#parag").text();
+                var res = sp.split(".");
+                var condition = sp.split(".").length;
+                for (i = 0; i < condition; i++) {
+                    res[i] += "<p>";
+                    rea += res[i];
+                    res[i] += "</p>";
+                }
+                document.getElementById("parag").innerHTML = rea;
+            });
+            $("#Count").click(function() {
+                var word = document.querySelector("#parag");
+                var count = word.innerText.split(' ').length;
+                document.getElementById("countt").innerHTML = count;
+            });
+            $("#Replace").click(function() {
+                var sp = $("#parag").text();
+                var ques = sp.replace(/\?/gi, "\ud83e\udd14");
+                document.getElementById("parag").innerHTML = ques;
+                var sp = $("#parag").text();
+                var que = ques.replace(/\!/gi, "\ud83d\ude32");
+                document.getElementById("parag").innerHTML = que;
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <butto id="Highlight">Highlight</butto>
+        <butto id="Count">Count</butto>
+        <butto id="Split">Split</butto>
+        <butto id="Replace">Replace</butto>
+    </center>
+    <div id="para">
+        <h2>Heading</h2>
+        <sa id="countt"></sa>
+        <p id="parag">Hey, you&#39;re not permitted in there. It&#39;s restricted. You&#39;ll be deactivated for sure. Don&#39;t call me
+            a mindless philosopher, you overweight glob of grease! Now come out before somebody sees
+            you. Secret mission? What plans? What are you talking about? I&#39;m not getting in there! I&#39;m
+            going to regret this. There goes another one. Hold your fire. There are no life forms. It must
+            have been short-circuited. That&#39;s funny, the damage doesn&#39;t look as bad from out here. Are
+            you sure this things safe? Close up formation. You&#39;d better let her loose. Almost there! I can&#39;t
+            hold them! It&#39;s away! It&#39;s a hit! Negative. Negative! It didn&#39;t go in. It just impacted on the
+            surface. Red Leader, we&#39;re right above you. Turn to point... oh-five, we&#39;ll cover for you. Stay
+            there... I just lost my starboard engine. Get set to make your attack run. The Death Star plans
+            are not in the main computer. Where are those transmissions you intercepted? What have you
+            done with those plans? We intercepted no transmissions. Aaah....This is a consular ship.
+            Were on a diplomatic mission. If this is a consular ship...were is the Ambassador?
+            Commander, tear this ship apart until you&#39;ve found those plans and bring me the Ambassador.
+            I want her alive! There she is! Set for stun! She&#39;ll be all right. Inform Lord Vader we have a
+            prisoner. What a piece of junk. She&#39;ll make point five beyond the speed of light. She may not
+            look like much, but she&#39;s got it where it counts, kid. I&#39;ve added some special modifications
+            myself. We&#39;re a little rushed, so if you&#39;ll hurry aboard we&#39;ll get out of here. Hello, sir. Which
+            way? All right, men. Load your weapons! Stop that ship! Blast &#39;em! Chewie, get us out of
+            here! Oh, my. I&#39;d forgotten how much I hate space travel. Run, Luke! Run!</p>
+    </div>
+</body>
+
+</html>
