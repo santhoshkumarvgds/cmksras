@@ -1,0 +1,63 @@
+body {
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    font-size: 25px;
+    color: green;
+    text-align: center;
+}
+
+.signup {
+    border: 1px solid green;
+    padding: 50px 70px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+label {
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    margin: 2px 0px 15px 0px;
+    padding: 8px 10px;
+
+    border: none;
+    width: 230px;
+    border-bottom: 1px solid green;
+    border-radius: 7px;
+    color: green;
+
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+select:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: white;
+    border: none;
+    border: 1px solid green;
+    padding: 10px 19px;
+    border-radius: 6px;
+    margin-right: 25px;
+    transition: .5s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    color: white;
+    background-color: green;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
